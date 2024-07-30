@@ -1,6 +1,6 @@
 package sample;
 
-public class Lion {
+ public class Lion {
 	private String name;
 	private double length;
 	private double speed;
