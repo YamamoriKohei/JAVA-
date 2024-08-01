@@ -13,9 +13,9 @@ public class Character {
         // ランダムな数値を生成するためのMath.random()を使用
         this.hp = (int) (Math.random() * 1000);
         this.mp = (int) (Math.random() * 1000);
-        this.attack = (int) (Math.random() * 500);
+        this.attack = (int) (Math.random() * 1000);
         this.speed = (int) (Math.random() * 1000);
-        this.defense = (int) (Math.random() * 100);
+        this.defense = (int) (Math.random() * 1000);
     }
 
     // Getter and Setter methods
