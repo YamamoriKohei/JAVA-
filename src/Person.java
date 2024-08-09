@@ -1,48 +1,36 @@
 class Person {
-    // クラスフィールド
-    public static int count = 0;
+  // インスタンスフィールドを定義
+  String name;
+  int age;
+  double height;
+  double weight;  // weightフィールドを追加
 
-    // インスタンスフィールド
-    public String firstName;
-    public String lastName; // 問題1: インスタンスフィールドに「lastName」を追加
-    public int age;
-    public double height;
-    public double weight;
+  // コンストラクタを定義し、インスタンスフィールドに値をセット
+  Person(String name, int age, double height, double weight) {
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
+    count++;  // 人数をカウント
+  }
 
-    // コンストラクタ1: lastNameを含む
-    Person(String firstName, String lastName, int age, double height, double weight) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        Person.count++; // インスタンスが生成されるたびにカウントを増やす
-    }
+  // BMIを計算して返すメソッド
+  double bmi() {
+    return this.weight / (this.height * this.height);
+  }
 
-    // コンストラクタ2: lastNameを引数で受け取らない（オーバーロード）
-    Person(String firstName, int age, double height, double weight) {
-        this(firstName, "不明", age, height, weight); // デフォルトの lastName を "不明" に設定
-    }
+  // インスタンスの情報を出力するメソッド
+  void print() {
+    System.out.println("名前は" + this.name + "です");
+    System.out.println("年は" + this.age + "です");
+    System.out.println("BMIは" + this.bmi() + "です");
+  }
 
-    // フルネームを返すメソッド
-    public String fullName() {
-        return this.firstName + " " + this.lastName;
-    }
+  // 人数をカウントするための静的変数
+  static int count = 0;
 
-    // インスタンスの情報を出力するメソッド
-    public void print() {
-        System.out.println("名前は" + this.fullName() + "です");
-        System.out.println("年は" + this.age + "です");
-        System.out.println("BMIは" + this.bmi() + "です");
-    }
-
-    // BMI を計算するメソッド
-    public double bmi() {
-        return this.weight / (this.height * this.height);
-    }
-
-    // クラスメソッド: 合計人数を出力
-    public static void printCount() {
-        System.out.println("合計" + Person.count + "人です");
-    }
+  // 人数の合計を出力するメソッド
+  static void printTotalCount() {
+    System.out.println("合計" + count + "人です");
+  }
 }

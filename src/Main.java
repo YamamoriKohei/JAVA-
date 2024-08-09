@@ -1,15 +1,17 @@
-
-
 class Main {
-    public static void main(String[] args) {
-        // コンストラクタを使ってインスタンスを作成
-        Person person1 = new Person("鈴木", "太郎", 20, 1.7, 60);
-        person1.print();
+  public static void main(String[] args) {
+    // 問題5: Main.javaの引数にweightの60を追加
+    Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
 
-        Person person2 = new Person("山田", "花子", 22, 1.5, 40);
-        person2.print();
+    // インスタンスフィールドの値を出力
+    System.out.println(person1.name);
+    System.out.println(person1.age);
+    System.out.println(person1.height);
 
-        // Personクラスの静的メソッド printCount を呼び出して、作成されたインスタンスの数を表示
-        Person.printCount();
-    }
+    // 問題8・9: person1の情報を出力
+    person1.print();
+
+    // 問題10: 人数の合計を出力
+    Person.printTotalCount();
+  }
 }
