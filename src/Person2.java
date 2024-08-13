@@ -18,15 +18,16 @@ class Person2 {
         count++;
     }
 
-    // BMI を計算するメソッド
-    public double bmi() {
-        return this.weight / this.height / this.height;
-    }
+	// BMIを計算して返すメソッド
+	double bmi() {
+		// 小数点以下第1位を切り捨て、かつ小数点以下1桁が0となるようにする
+		return Math.floor(this.weight / (this.height * this.height));
+	}
 
     // 人の詳細を出力するメソッド
     public void print() {
         System.out.println("名前は" + this.name + "です");
-        System.out.println("年は" + this.age + "です");
+        System.out.println("年は" + this.age + "才です");
         System.out.println("BMIは" + this.bmi() + "です");
     }
 
