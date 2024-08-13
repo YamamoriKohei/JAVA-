@@ -34,5 +34,17 @@ class Person3 {
 
 	public static void printCount() {
 		System.out.println("合計 " + Person3.count + " 人です");
+		System.out.println();
+	}
+
+	// インスタンスメソッドbuyを定義
+	public void buy(Car car) {
+		car.setOwner(this.fullName());
+		System.out.println(car.getOwner() + "が購入しました");
+	}
+
+	public void buy(Bicycle bicycle) {
+		bicycle.setOwner(this.fullName());
+		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 }

@@ -7,5 +7,21 @@ class Main3 {
 		person2.print();
 
 		Person3.printCount();
+
+		Car car = new Car();
+		Bicycle bicycle = new Bicycle();
+
+		//ownerを設定
+		car.setOwner(person1.fullName());
+		bicycle.setOwner(person2.fullName());
+
+		System.out.println(car.getOwner());
+		System.out.println(bicycle.getOwner());
+		System.out.println();
+
+		// 乗り物を購入
+		person1.buy(car);
+		person2.buy(bicycle);
+
 	}
 }
