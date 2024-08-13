@@ -35,4 +35,5 @@ class Person {
 	static void printTotalCount() {
 		System.out.println("合計" + count + "人です");
 	}
+
 }

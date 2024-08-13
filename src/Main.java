@@ -15,4 +15,5 @@ class Main {
 		// 問題10: 人数の合計を出力
 		Person.printTotalCount();
 	}
+
 }
